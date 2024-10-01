@@ -7,7 +7,7 @@ const { addJobToQueue } = require('./jobQueue')
 const deleteFile = require('./delete')
 
 // Database Connection
-mongoose.connect("mongodb://localhost/compiler")
+mongoose.connect("mongodb+srv://subhash:oXqW0RSZj6gtirIf@cluster0.fjeho.mongodb.net/compiler")
     .then(() => console.log("DB connected successfully."))
     .catch((err) => console.error("DB connection failed:", err));
 
