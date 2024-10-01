@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+
+.loader {
+    width: 24px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 4px solid rgb(169, 171, 171);
+    border-right-color: rgb(255, 255, 255);
+    animation: l2 1s infinite linear;
+  }
+  @keyframes l2 {to{transform: rotate(1turn)}}
+
+  ::-webkit-scrollbar{
+    display: none;
+  }
+
+  body{
+    overflow: hidden;
+    font-family: "Teko", sans-serif;
+  }
