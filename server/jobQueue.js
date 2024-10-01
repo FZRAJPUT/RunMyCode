@@ -43,8 +43,7 @@ jobQueue.process(NUM_WORKERS, async ({ data }) => {
       }
     } else if (job.language === "py") {
       try {
-        const result = await executePy(normalizedFilePath);
-        output = result.stdout;  // Python program output
+        output = await executePy(normalizedFilePath);
         console.log("Python code execution completed");
       } catch (err) {
         console.error("Error during Python code execution:", err);
@@ -55,8 +54,7 @@ jobQueue.process(NUM_WORKERS, async ({ data }) => {
       }
     } else if (job.language === "c") {
       try {
-        const result = await executeC(normalizedFilePath);
-        output = result.stdout;  // Store the output from the C code
+        output = await executeC(normalizedFilePath);
         job.outputPath = result.outPath; // Store the outputPath for future use
         console.log("C code execution completed");
       } catch (err) {
