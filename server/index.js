@@ -13,7 +13,7 @@ mongoose.connect("mongodb+srv://subhash:oXqW0RSZj6gtirIf@cluster0.fjeho.mongodb.
 
 // Server configuration
 const app = express();
-const PORT = 4000;
+const PORT = 5169 || process.env;
 
 // Middlewares
 app.use(express.json());
