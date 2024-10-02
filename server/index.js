@@ -46,7 +46,7 @@ app.get('/status', async (req, res) => {
             res.status(200).json({ success: true, job });
     
             // Delete files
-            deleteFile(file, out);
+            // deleteFile(file, out);
     
             // Delete job
             // const result = await jobModel.deleteOne({ _id: jobId });
